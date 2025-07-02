@@ -1,0 +1,24 @@
+.ChoiseDiv{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 30px 0;
+
+}
+
+.MainText{
+    color: black;
+    font-family: "Times New Roman", serif;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.DivButtons{
+    width: 50%;
+    margin-top: 30px;
+
+    display: flex;
+    justify-content: space-between;
+}

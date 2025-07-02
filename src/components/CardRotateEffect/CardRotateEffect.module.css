@@ -1,0 +1,54 @@
+.card3d {
+  position: relative;
+  width: 400px;
+  height: 200px;
+  transform-style: preserve-3d;
+  transform: perspective(800px);
+  animation: autoRun3d 20s linear infinite;
+  will-change: transform;
+}
+
+.card3d:hover {
+  animation-play-state: paused !important;
+}
+
+.card3d:hover > div {
+  animation-play-state: paused !important;
+}
+
+.childDiv {
+  position: absolute;
+  width: 80px;
+  height: 112px;
+  /* background-color: rgb(199, 199, 199);
+  border: 2px solid lightgray;
+  border-radius: 0.5rem; */
+  top: 50%;
+  left: 50%;
+  transform-origin: center center;
+  animation: animateBrightness 20s linear infinite;
+  transition-duration: 200ms;
+  will-change: transform, filter;
+}
+
+/* Keyframes */
+@keyframes autoRun3d {
+  from {
+    transform: perspective(800px) rotateY(-360deg);
+  }
+  to {
+    transform: perspective(800px) rotateY(0deg);
+  }
+}
+
+@keyframes animateBrightness {
+  10% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(0.1);
+  }
+  90% {
+    filter: brightness(1);
+  }
+}
